@@ -7,6 +7,7 @@
     android:background="@color/main_color"
     tools:context=".LoginPage">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -58,12 +59,16 @@
                     </TextView>
 
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="30dp"
                         android:layout_marginTop="30dp"
                         android:gravity="center"
+                        app:boxBackgroundColor="#00FFA239"
+
+                        app:boxStrokeColor="#EF8002"
                         app:startIconDrawable="@drawable/ic_baseline_person_24"
                         app:startIconTint="@color/black">
 
@@ -78,6 +83,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -85,10 +91,14 @@
                         android:layout_marginTop="30dp"
                         android:gravity="center"
                         android:hint="Password"
+                        app:boxBackgroundColor="#00FFA239"
+                        app:boxStrokeColor="#EF8002"
                         app:passwordToggleEnabled="true"
                         app:passwordToggleTint="@color/black"
                         app:startIconDrawable="@drawable/ic_baseline_lock_24"
-                        app:startIconTint="@color/black">
+                        app:startIconTint="@color/black"
+
+                        >
 
                         <EditText
 
@@ -121,8 +131,9 @@
                         android:layout_marginHorizontal="50dp"
                         android:layout_marginTop="20dp"
                         android:gravity="center"
+                        android:text="Login"
                         android:textColor="@color/black"
-                        android:text="Login">
+                        android:textStyle="bold">
 
                     </Button>
                 </LinearLayout>
@@ -142,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Don't have an Account ? Register"
                 android:textSize="15sp"
