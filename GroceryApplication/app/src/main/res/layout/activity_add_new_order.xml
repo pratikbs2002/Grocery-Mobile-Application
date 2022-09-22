@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AddNewOrder">
+<Button
+    android:id="@+id/touchmeoye"
+    android:text="touch me oye"
+    android:textSize="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-   <Button
-       android:id="@+id/touchmedash"
-       android:text="touch me"
-       android:textSize="30dp"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-
-   </Button>
-
+</Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
