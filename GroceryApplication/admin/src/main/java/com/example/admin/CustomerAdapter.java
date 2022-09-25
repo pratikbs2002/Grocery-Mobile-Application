@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyViewHolder> {
     Context context;
     ArrayList<CustomerModel> customerModelArrayList;
-    TextView button;
+
 
     public CustomerAdapter(Context context, ArrayList<CustomerModel> customerModelArrayList) {
         this.context = context;
@@ -32,20 +32,6 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         CustomerModel model = customerModelArrayList.get(position);
         holder.CustomerName.setText(model.getCustomerName());
-
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, update_transaction.class);
-//                intent.putExtra("id", customerModelArrayList.get(holder.getAdapterPosition()).getId());
-//                intent.putExtra("amount", customerModelArrayList.get(holder.getAdapterPosition()).getAmount());
-//                intent.putExtra("note", customerModelArrayList.get(holder.getAdapterPosition()).getNote());
-//                intent.putExtra("type", customerModelArrayList.get(holder.getAdapterPosition()).getType());
-//                context.startActivity(intent);
-//                ((Activity) context).finish();
-//            }
-//        });
-
     }
 
     @Override

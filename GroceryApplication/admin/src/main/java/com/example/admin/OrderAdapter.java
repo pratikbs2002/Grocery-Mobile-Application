@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder> {
     Context context;
     ArrayList<OrderModel> orderModelArrayList;
-    TextView button;
 
     public OrderAdapter(Context context, ArrayList<OrderModel> orderModelArrayList) {
         this.context = context;
@@ -32,21 +31,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
         OrderModel model = orderModelArrayList.get(position);
         holder.Order_list.setText(model.getOrder_list());
         holder.Order_date.setText(model.getOrder_date());
-
-
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, update_transaction.class);
-//                intent.putExtra("id", customerList.get(holder.getAdapterPosition()).getId());
-//                intent.putExtra("amount", customerList.get(holder.getAdapterPosition()).getAmount());
-//                intent.putExtra("note", customerList.get(holder.getAdapterPosition()).getNote());
-//                intent.putExtra("type", customerList.get(holder.getAdapterPosition()).getType());
-//                context.startActivity(intent);
-//                ((Activity) context).finish();
-//            }
-//        });
-
     }
 
     @Override
