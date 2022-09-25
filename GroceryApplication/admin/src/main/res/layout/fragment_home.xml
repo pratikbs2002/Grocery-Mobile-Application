@@ -7,21 +7,21 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/ScrollViewOrders"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20sp"
-        android:layout_marginRight="10dp"
-        android:fillViewport="true">
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/ScrollViewOrders"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="20sp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:fillViewport="true">-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ListViewOfOrders"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="300dp">
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/ListViewOfOrders"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:paddingBottom="300dp">-->
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </androidx.core.widget.NestedScrollView>
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
 </LinearLayout>
