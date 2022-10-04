@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GroceryApplication</string>
+    <string name="my_orders"><u>MY Orders</u></string>
 </resources>

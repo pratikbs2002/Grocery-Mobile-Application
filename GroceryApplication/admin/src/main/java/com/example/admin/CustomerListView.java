@@ -2,6 +2,7 @@ package com.example.admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -34,6 +35,8 @@ public class CustomerListView extends AppCompatActivity {
         customerModelArrayList = new ArrayList<>();
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
+        ListViewOfCustomers.setLayoutManager(new LinearLayoutManager(this));
+        ListViewOfCustomers.setHasFixedSize(true);
         loaddata();
 
     }
