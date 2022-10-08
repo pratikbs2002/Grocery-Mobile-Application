@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.groceryapplication.Orders.Dashboard;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -28,6 +28,8 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+//        getSupportActionBar().hide();
+
 
         LoginButton = findViewById(R.id.LoginButton);
         LoginEmail = findViewById(R.id.LoginEmail);
@@ -42,17 +44,17 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ProgressBar_login.setVisibility(View.VISIBLE);
-               userLogin();
-            }
-        });
-        RegisterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginPage.this,RegisterPage.class));
+                userLogin();
             }
         });
 
-        getSupportActionBar().hide();
+        RegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginPage.this, RegisterPage.class));
+            }
+        });
+
     }
 
     private void userLogin() {
@@ -76,8 +78,8 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(LoginPage.this, MainActivity.class));
-                    finish();
+                    startActivity(new Intent(LoginPage.this, Dashboard.class));
+//                    finish();
                 } else {
                 }
                 ProgressBar_login.setVisibility(View.GONE);

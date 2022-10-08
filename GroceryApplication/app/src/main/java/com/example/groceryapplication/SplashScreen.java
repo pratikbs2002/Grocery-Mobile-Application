@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.Space;
 
+import com.example.groceryapplication.Orders.Dashboard;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashScreen extends AppCompatActivity {
@@ -26,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
         Thread thread = new Thread(){
             public void run(){
                 try {
-                    sleep(2000);
+                    sleep(4000);
                 }
                 catch (Exception e){
                     e.printStackTrace();
@@ -38,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
                         public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                             if (mAuth.getCurrentUser() != null) {
                                 try {
-                                    startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                                    startActivity(new Intent(SplashScreen.this, Dashboard.class));
                                     finish();
 
                                 } catch (Exception e) {

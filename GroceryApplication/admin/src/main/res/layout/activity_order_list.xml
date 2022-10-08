@@ -4,31 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Customers.Dashboard">
+    tools:context=".Orders.OrderList">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/center_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="hello "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/scrollview_dashboard"
+    </TextView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="10dp"
+        android:fillViewport="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_cycle_orderAdmin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20sp"
-            android:layout_marginRight="10dp"
-            android:fillViewport="true">
+            android:paddingBottom="300dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/history_cycle_dashboard"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="300dp">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-        </androidx.core.widget.NestedScrollView>
-    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -43,5 +49,4 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </ProgressBar>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
